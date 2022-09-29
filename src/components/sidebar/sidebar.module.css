@@ -1,0 +1,96 @@
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+.container .logo{
+    max-width: 100px;
+    cursor: pointer;
+}
+.UserAccount{
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 43px 1fr;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+}
+.UserAccount:hover{
+    background-color: #f5f5f5;
+}
+.UserAccount img{
+    height: 43px;
+    width: 43px;
+    border-radius: 23px;
+    object-fit: cover;
+}
+.UserAccountDetails{
+    width: 100%;
+    height: fit-content;
+}
+.UserAccountName{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    color: #1E1E1E;
+    margin-bottom: 2px;
+}
+.position{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+    color: #474F54;
+}
+.NavLinksContainer{
+    width: 100%;
+    display: grid;
+    gap: 10px;
+}
+.NavLink, .NavLink2{
+    height: 38px;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    align-items: center;
+    cursor: pointer;
+}
+.NavLink2{
+    display: grid;
+    grid-template-columns: 16px 1fr 22px;
+}
+.NavLink:hover, .NavLink2:hover{
+    background-color: #fafafa;
+}
+.NavLink .NavIcon, .NavLink2 .NavIcon{
+    height: 16px;
+    color: #474F54;
+}
+.NavLink p, .NavLink2 p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #474F54;
+}
+.showExtraButton{
+    height: 22px;
+    width: 22px;
+    background-color: red;
+    border-radius: 11px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #474F54;
+}
