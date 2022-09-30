@@ -4,6 +4,7 @@
     background-color: var(--white);
     padding: 20px 15px;
     box-sizing: border-box;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
 }
 .container .logo{
     max-width: 100px;
@@ -55,7 +56,7 @@
     display: grid;
     gap: 10px;
 }
-.NavLink, .NavLink2{
+.NavLink, .NavLink2, .NavLink3{
     height: 38px;
     width: 100%;
     border-radius: 8px;
@@ -71,14 +72,14 @@
     display: grid;
     grid-template-columns: 16px 1fr 22px;
 }
-.NavLink:hover, .NavLink2:hover{
+.NavLink:hover, .NavLink2:hover, .NavLink3{
     background-color: #fafafa;
 }
-.NavLink .NavIcon, .NavLink2 .NavIcon{
+.NavLink .NavIcon, .NavLink2 .NavIcon, .NavLink3 .NavIcon{
     height: 16px;
     color: #474F54;
 }
-.NavLink p, .NavLink2 p{
+.NavLink p, .NavLink2 p, .NavLink3 p{
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -87,10 +88,11 @@
 .showExtraButton{
     height: 22px;
     width: 22px;
-    background-color: red;
+    background-color: #F4F5F7;
     border-radius: 11px;
     display: grid;
     align-items: center;
     justify-content: center;
     color: #474F54;
+    font-size: 12px;
 }

@@ -6,6 +6,9 @@ import Work from '../assets/icons/Work.png';
 import Graph from '../assets/icons/Graph.png';
 import Chart from '../assets/icons/Chart.png';
 import Setting from '../assets/icons/Setting.png';
+import assets from '../assets/icons/assets.png';
+import working from '../assets/icons/working.png';
+import gift from '../assets/icons/gift.png';
 
 const links = [
     {
@@ -24,18 +27,18 @@ const links = [
         to: '/',
         extraLinks: [
             {
-                title: 'Service Requests',
-                icon: Home,
+                title: 'Assets Financing',
+                icon: assets,
                 to: '/',
             },
             {
-                title: 'Service Requests',
-                icon: Home,
+                title: 'Working Capital',
+                icon: working,
                 to: '/',
             },
             {
-                title: 'Service Requests',
-                icon: Home,
+                title: 'Ancilinary Services',
+                icon: gift,
                 to: '/',
             }
             

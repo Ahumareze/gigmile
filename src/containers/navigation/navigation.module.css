@@ -4,5 +4,11 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 240px 1fr;
-    background-color: papayawhip;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 40px;
+    box-sizing: border-box;
 }

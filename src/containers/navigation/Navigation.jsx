@@ -6,10 +6,13 @@ import classes from './navigation.module.css';
 //components
 import { Sidebar } from '../../components'
 
-function Navigation(props) {
+function Navigation({children}) {
     return (
         <div className={classes.container}>
             <Sidebar />
+            <div className={classes.main}>
+                {children}
+            </div>
         </div>
     );
 }

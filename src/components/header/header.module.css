@@ -1,0 +1,70 @@
+.header{
+    height: 70px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+}
+.welcome{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1E1E1E;
+}
+.header_rightItems{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.searchBar{
+    height: 40px;
+    width: 400px;
+    background-color: #FAFAFA;
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2), inset 0px 1px 0px rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 10px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.searchBar input{
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #474F54;
+}
+.searchBar input:focus{
+    outline: none;
+}
+.headerIcon{
+    height: 24px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.accountDropDown{
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.accountDropDown img{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.accountDropDown:hover{
+    background-color: #FAFAFA;
+}
