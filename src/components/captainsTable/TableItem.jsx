@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 //styles
 import classes from './captainsTable.module.css';
@@ -7,8 +7,10 @@ import classes from './captainsTable.module.css';
 import {FiMoreVertical} from 'react-icons/fi';
 
 function TableItem(props) {
+    const [showDots, setShowDots] = useState(false);
+
     return (
-        <div className={classes.TableItem}>
+        <div className={classes.TableItem} onMouseEnter={() => setShowDots(true)} onMouseLeave={() => setShowDots(false)}>
             <div className={classes.TableItemUser}>
                 <div className={classes.profile}>AR</div>
                 <p>Alan Richard Michaelson</p>
@@ -16,8 +18,9 @@ function TableItem(props) {
             <p className={classes.TableItemAmount}>Fuel Advance</p>
             <p className={classes.TableItemAmount}>N 1,090,890.00</p>
             <p className={classes.TableItemAmount}>N 1,090,890.00</p>
+
             <div className={classes.dotsContainer}>
-                <FiMoreVertical />
+                {showDots && <FiMoreVertical />}
             </div>
         </div>
     );
