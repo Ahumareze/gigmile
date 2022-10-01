@@ -30,8 +30,8 @@ function Header(props) {
             <p className={classes.welcome}>Hello, Michael 👋🏽</p>
             <div className={classes.header_rightItems}>
                 {search}
-                <img src={Bell} alt='Bell' className={classes.headerIcon} />
                 <FiEdit color='#474F54' className={classes.headerIcon} />
+                <img src={Bell} alt='Bell' className={classes.headerIcon} />
                 {accountDropDown}
             </div>
         </div>

@@ -7,14 +7,14 @@ import classes from './dashboard.module.css';
 import { Navigation } from '../../containers';
 
 //components
-import { Header } from '../../components';
+import { CaptainsTable, Header } from '../../components';
 
 function Dashboard() {
     return (
         <Navigation>
             <Header />
             <section>
-                
+                <CaptainsTable />
             </section>
         </Navigation>
     );
