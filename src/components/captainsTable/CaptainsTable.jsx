@@ -6,7 +6,10 @@ import classes from './captainsTable.module.css';
 //icons
 import { FiSearch, FiFilter } from 'react-icons/fi';
 
-const TableItem = ({name, selected}) => {
+//component
+import TableItem from './TableItem';
+
+const TableHeaderItem = ({name, selected}) => {
     let item = (
         <div className={classes.headerItem}>
             <div className={classes.mainHeaderItem}>
@@ -52,11 +55,18 @@ function CaptainsTable(props) {
 
             <div className={classes.table}>
                 <div className={classes.tableHeader}>
-                    <TableItem name={'Active'} />
-                    <TableItem name={'Pending'} selected={'Pending'} />
-                    <TableItem name={'Completed'} />
-                    <TableItem name={'Declined'} />
+                    <TableHeaderItem name={'Active'} selected={'Active'} />
+                    <TableHeaderItem name={'Pending'} />
+                    <TableHeaderItem name={'Completed'} />
+                    <TableHeaderItem name={'Declined'} />
                 </div>
+                <div className={classes.tableTitle}>
+                    <p>Captains</p>
+                    <p>Working Capital</p>
+                    <p>Total Request Value</p>
+                    <p>Total Balance</p>
+                </div>
+                <TableItem />
             </div>
         </div>
     );
