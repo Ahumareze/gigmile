@@ -73,7 +73,7 @@
     font-size: 16px;
 }
 .mainChart{
-    height: 20px;
+    height: 200px;
     width: 100%;
-    background-color: red;
+    margin-top: 10px;
 }
