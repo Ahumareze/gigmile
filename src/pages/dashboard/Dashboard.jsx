@@ -7,14 +7,16 @@ import classes from './dashboard.module.css';
 import { Navigation } from '../../containers';
 
 //components
-import { CaptainsTable, Chart, Header } from '../../components';
+import { BarChartDataBox, CaptainsTable, Header } from '../../components';
 
 function Dashboard() {
     return (
         <Navigation>
             <Header />
             <section>
-                <Chart />
+                <div className={classes.top}>
+                    <BarChartDataBox />
+                </div>
                 <CaptainsTable />
             </section>
         </Navigation>
