@@ -82,7 +82,7 @@
     background-color: #fafafa;
 }
 .table{
-    height: 400px;
+    height: fit-content;
     width: 100%;
     margin-top: 30px;
     border: 0.5px solid #D9DADE;
@@ -158,7 +158,6 @@
     height: 66px;
     width: 100%;
     border-top: 1px solid #D9DADE;
-    border-bottom: 1px solid #D9DADE;
     padding: 0 27px;
     box-sizing: border-box;
     display: grid;
@@ -199,4 +198,27 @@
     font-size: 16px;
     text-align: center;
     cursor: pointer;
+    overflow: auto;
+}
+.dropDownContent{
+    height: 50px;
+    width: 180px;
+    background: #FFFFFF;
+    border: 1px solid #D9DADE;
+    box-shadow: 0px 5px 6px rgba(67, 73, 97, 0.08);
+    border-radius: 6px;
+    position: relative;
+    position: absolute;
+    right: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #1E1E1E;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+.dropDownContent:hover{
+    background-color: #fafafa;
 }

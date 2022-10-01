@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 //styles
 import classes from './captainsTable.module.css';
@@ -8,10 +8,11 @@ import { FiSearch, FiFilter } from 'react-icons/fi';
 
 //component
 import TableItem from './TableItem';
+import tableHeaders from '../../utilities/tableHeaders';
 
-const TableHeaderItem = ({name, selected}) => {
+const TableHeaderItem = ({name, selected, onClick}) => {
     let item = (
-        <div className={classes.headerItem}>
+        <div className={classes.headerItem} onClick={onClick}>
             <div className={classes.mainHeaderItem}>
                 <p>{name}</p>
             </div>
@@ -20,7 +21,7 @@ const TableHeaderItem = ({name, selected}) => {
     )
     if(selected === name){
         item = (
-            <div className={classes.headerItem}>
+            <div className={classes.headerItem} onClick={onClick}>
                 <div className={classes.mainHeaderItem}>
                     <p className={classes.activeText}>{name}</p>
                 </div>
@@ -36,6 +37,7 @@ const TableHeaderItem = ({name, selected}) => {
 }
 
 function CaptainsTable(props) {
+    const [active, setActive] = useState('Active')
     
     return (
         <div className={classes.container}>
@@ -55,10 +57,10 @@ function CaptainsTable(props) {
 
             <div className={classes.table}>
                 <div className={classes.tableHeader}>
-                    <TableHeaderItem name={'Active'} selected={'Active'} />
-                    <TableHeaderItem name={'Pending'} />
-                    <TableHeaderItem name={'Completed'} />
-                    <TableHeaderItem name={'Declined'} />
+                    
+                    {tableHeaders.map((i, idx) => (
+                        <TableHeaderItem name={i} selected={active} onClick={() => setActive(i)} />
+                    ))}
                 </div>
                 <div className={classes.tableTitle}>
                     <p>Captains</p>
@@ -66,6 +68,9 @@ function CaptainsTable(props) {
                     <p>Total Request Value</p>
                     <p>Total Balance</p>
                 </div>
+                <TableItem />
+                <TableItem />
+                <TableItem />
                 <TableItem />
             </div>
         </div>
