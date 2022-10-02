@@ -1,7 +1,7 @@
 .container{
-    height: 50vh;
+    height: fit-content;
     width: 100%;
-    /* border: 1px solid #000; */
+    margin-bottom: 78px;
 }
 .top{
     height: fit-content;
@@ -163,6 +163,7 @@
     display: grid;
     grid-template-columns: 1.3fr 1.1fr 1fr 0.7fr 50px;
     align-items: center;
+    position: relative;
 }
 .TableItemUser{
     width: 100%;
@@ -180,10 +181,11 @@
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     display: grid;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
 }
 .TableItemUser p, .TableItemAmount{
     margin: 0;
@@ -191,6 +193,10 @@
     font-weight: 500;
     font-size: 14px;
     color: #1E1E1E;
+    text-transform: capitalize;
+}
+.TableItemAmount{
+    font-weight: 400;
 }
 .dotsContainer{
     height: fit-content;
@@ -198,7 +204,7 @@
     font-size: 16px;
     text-align: center;
     cursor: pointer;
-    overflow: auto;
+    
 }
 .dropDownContent{
     height: 50px;
@@ -207,9 +213,9 @@
     border: 1px solid #D9DADE;
     box-shadow: 0px 5px 6px rgba(67, 73, 97, 0.08);
     border-radius: 6px;
-    position: relative;
     position: absolute;
-    right: 50px;
+    right: 20px;
+    bottom: -30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -218,7 +224,14 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0 10px;
+    z-index: 1000;
 }
 .dropDownContent:hover{
     background-color: #fafafa;
+}
+.paginationBar{
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    margin-top: 42px;
 }

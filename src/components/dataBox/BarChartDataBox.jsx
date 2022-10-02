@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 //styles
 import classes from './dataBox.module.css';
@@ -9,6 +9,7 @@ import users from '../../assets/icons/twoUser.png';
 
 //chart libaries
 import { Bar } from 'react-chartjs-2';
+ // eslint-disable-next-line
 import {Chart as ChartJS} from 'chart.js/auto';
 
 //data
@@ -17,7 +18,6 @@ import { barChartData, chartOptions } from '../../utilities/chartData';
 
 function BarChartDataBox(props) {
     
-
     return (
         <div className={classes.container}>
             <div className={classes.header}>

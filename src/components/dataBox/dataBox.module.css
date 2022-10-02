@@ -54,6 +54,7 @@
     padding: 20px;
     box-sizing: border-box;
     padding-top: 15px;
+    overflow: hidden;
 }
 .mainLabel{
     display: flex;
@@ -65,15 +66,78 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    color: #1E1E1E;
+    color: #474F54;
     margin: 0;
 }
 .mainLabel p span{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
+    color: #1E1E1E;
 }
 .mainChart{
+    /* height: 200px; */
+    width: 100%;
+    margin-top: 10px;
+}
+.rv_contianer{
     height: 200px;
     width: 100%;
     margin-top: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.rv_main{
+    width: 100%;
+    text-align: center;
+}
+.rv_p1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #474F54;
+    margin: 0;
+}
+.rv_p2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #1E1E1E;
+    margin: 0;
+    margin: 5px 0;
+}
+.flex_stat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flex_stat img{
+    padding-top: 1px;
+}
+.stat_number, .stat_title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.004em;
+    color: #1DB385;
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 10px;
+}
+.stat_title{
+    color: #A0AEC0;
+}
+.DoughnutContainer{
+    max-width: 200px;
+    overflow: hidden;
+}
+.mainDoughnutContainer{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 20px;
 }

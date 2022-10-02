@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 //styles
 import classes from './captainsTable.module.css';
@@ -9,6 +9,12 @@ import { FiSearch, FiFilter } from 'react-icons/fi';
 //component
 import TableItem from './TableItem';
 import tableHeaders from '../../utilities/tableHeaders';
+import Pagination from '../pagination/Pagination';
+
+//data
+import captainsData from '../../utilities/captainsData';
+
+let PageSize = 10;
 
 const TableHeaderItem = ({name, selected, onClick}) => {
     let item = (
@@ -37,7 +43,14 @@ const TableHeaderItem = ({name, selected, onClick}) => {
 }
 
 function CaptainsTable(props) {
-    const [active, setActive] = useState('Active')
+    const [active, setActive] = useState('Active');
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const currentTableData = useMemo(() => {
+        const firstPageIndex = (currentPage - 1) * PageSize;
+        const lastPageIndex = firstPageIndex + PageSize;
+        return captainsData.slice(firstPageIndex, lastPageIndex);
+    }, [currentPage]);
     
     return (
         <div className={classes.container}>
@@ -59,7 +72,7 @@ function CaptainsTable(props) {
                 <div className={classes.tableHeader}>
                     
                     {tableHeaders.map((i, idx) => (
-                        <TableHeaderItem name={i} selected={active} onClick={() => setActive(i)} />
+                        <TableHeaderItem name={i} selected={active} onClick={() => setActive(i)} key={idx} />
                     ))}
                 </div>
                 <div className={classes.tableTitle}>
@@ -68,11 +81,23 @@ function CaptainsTable(props) {
                     <p>Total Request Value</p>
                     <p>Total Balance</p>
                 </div>
-                <TableItem />
-                <TableItem />
-                <TableItem />
-                <TableItem />
+                {currentTableData.map((i, idx) => (
+                    <TableItem 
+                        name={i.name}
+                        workingCapital={i.workingCapital}
+                        totalReqVal={i.totalReqVal}
+                        balance={i.balance}
+                        key={idx}
+                    />
+                ))}
             </div>
+            <Pagination
+                className={classes.paginationBar}
+                currentPage={currentPage}
+                totalCount={captainsData.length}
+                pageSize={PageSize}
+                onPageChange={page => setCurrentPage(page)}
+            />
         </div>
     );
 }

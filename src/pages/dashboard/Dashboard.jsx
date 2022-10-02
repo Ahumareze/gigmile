@@ -7,7 +7,7 @@ import classes from './dashboard.module.css';
 import { Navigation } from '../../containers';
 
 //components
-import { BarChartDataBox, CaptainsTable, Header } from '../../components';
+import { BarChartDataBox, CaptainsTable, Header, PieChartDataBox, RequestValue } from '../../components';
 
 function Dashboard() {
     return (
@@ -16,6 +16,8 @@ function Dashboard() {
             <section>
                 <div className={classes.top}>
                     <BarChartDataBox />
+                    <RequestValue />
+                    <PieChartDataBox />
                 </div>
                 <CaptainsTable />
             </section>
