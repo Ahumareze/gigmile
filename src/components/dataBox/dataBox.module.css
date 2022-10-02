@@ -7,7 +7,7 @@
     border-radius: 4px;
 }
 .header{
-    height: 80px;
+    min-height: 80px;
     width: 100%;
     border-bottom: 1px solid #EEF0F6;
     box-sizing: border-box;

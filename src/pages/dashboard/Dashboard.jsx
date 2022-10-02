@@ -11,7 +11,7 @@ import { BarChartDataBox, CaptainsTable, Header, PieChartDataBox, RequestValue }
 
 function Dashboard() {
     return (
-        <Navigation>
+        <Navigation activeLink={'Dashboard'}>
             <Header />
             <section>
                 <div className={classes.top}>

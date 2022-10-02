@@ -6,10 +6,10 @@ import classes from './navigation.module.css';
 //components
 import { Sidebar } from '../../components'
 
-function Navigation({children}) {
+function Navigation({children, activeLink}) {
     return (
         <div className={classes.container}>
-            <Sidebar />
+            <Sidebar activeLink={activeLink} />
             <div className={classes.main}>
                 {children}
             </div>

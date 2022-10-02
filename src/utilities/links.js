@@ -1,25 +1,27 @@
 //import icons
-import Home from '../assets/icons/Home.png';
-import Users from '../assets/icons/Users.png';
 import Paper from '../assets/icons/Paper.png';
-import Work from '../assets/icons/Work.png';
-import Graph from '../assets/icons/Graph.png';
-import Chart from '../assets/icons/Chart.png';
-import Setting from '../assets/icons/Setting.png';
 import assets from '../assets/icons/assets.png';
 import working from '../assets/icons/working.png';
 import gift from '../assets/icons/gift.png';
 
+//reacticons
+import {GrHomeRounded} from 'react-icons/gr';
+import {HiOutlineUsers} from 'react-icons/hi';
+import {MdOutlineHomeRepairService} from 'react-icons/md';
+import {AiOutlinePieChart} from 'react-icons/ai';
+import {BiBarChartSquare} from 'react-icons/bi';
+import {FiSettings, FiHome} from 'react-icons/fi';
+
 const links = [
     {
         title: 'Dashboard',
-        icon: Home,
-        to: '/'
+        to: '/',
+        icon: <FiHome />
     },
     {
         title: 'Captains',
-        icon: Users,
-        to: '/captains'
+        icon: <HiOutlineUsers />,
+        to: '/'
     },
     {
         title: 'Service Requests',
@@ -46,22 +48,22 @@ const links = [
     },
     {
         title: 'Service Partners',
-        icon: Work,
-        to: '/partners',
+        icon: <MdOutlineHomeRepairService />,
+        to: '/',
     },
     {
         title: 'Assets Metrics',
-        icon: Graph,
-        to: '/assets-metrics',
+        icon: <AiOutlinePieChart />,
+        to: '/',
     },
     {
         title: 'Repayments',
-        icon: Chart,
+        icon: <BiBarChartSquare />,
         to: '/',
     },
     {
         title: 'Settings',
-        icon: Setting,
+        icon: <FiSettings />,
         to: '/',
     }
 ];

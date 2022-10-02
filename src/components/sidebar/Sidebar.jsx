@@ -8,7 +8,7 @@ import logo from '../../assets/logo/logo.png';
 import base from '../../assets/users/base.png';
 
 //icons
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp, FiLogOut } from 'react-icons/fi';
 
 //data
 import links from '../../utilities/links';
@@ -25,14 +25,15 @@ const UserAccount = () => {
     )
 };
 
-const NavLink = ({icon, title, to, extraLinks}) => {
+const NavLink = ({icon, title, to, extraLinks, active}) => {
     //state incharge of rendering links
     const [showExtraLinks, setShowExtraLinks] = useState(false);
     const [renderLinks, setRenderLinks] = useState([]);
 
     let LinkItem = (
-        <div className={classes.NavLink}>
-            <img alt='icon' src={icon} className={classes.NavIcon} />
+        <div className={`${classes.NavLink} ${active && classes.activeNavLink}`}>
+            {/* <img alt='icon' src={icon} className={classes.NavIcon} /> */}
+            {icon}
             <p>{title}</p>
         </div>
     );
@@ -50,7 +51,7 @@ const NavLink = ({icon, title, to, extraLinks}) => {
     if(extraLinks){
         LinkItem = (
             <>
-                <div className={classes.NavLink2} onClick={toggleLinks} >
+                <div className={`${classes.NavLink2} ${active && classes.activeNavLink}`} onClick={toggleLinks} >
                     <img alt='icon' src={icon} className={classes.NavIcon} />
                     <p>{title}</p>
                     <div className={classes.showExtraButton}>
@@ -59,7 +60,7 @@ const NavLink = ({icon, title, to, extraLinks}) => {
                 </div>
 
                 {renderLinks.map((i, idx) => (
-                    <div className={classes.NavLink3} key={idx}>
+                    <div className={`${classes.NavLink3} ${active && classes.activeNavLink}`} key={idx}>
                         <img alt='icon' src={i.icon} className={classes.NavIcon} />
                         <p>{i.title}</p>
                     </div>
@@ -75,15 +76,30 @@ const NavLink = ({icon, title, to, extraLinks}) => {
     )
 }
 
-const Sidebar = (props) => {
+const Sidebar = ({activeLink}) => {
     return (
         <div className={classes.container}>
-            <img className={classes.logo} src={logo} alt='logo' />
-            <UserAccount />
-            <div className={classes.NavLinksContainer}>
-                {links.map((i, idx) => (
-                    <NavLink icon={i.icon} title={i.title} extraLinks={i.extraLinks} key={idx} />
-                ))}
+            <div className={classes.padded_container}>
+                <img className={classes.logo} src={logo} alt='logo' />
+                <UserAccount />
+                <div className={classes.NavLinksContainer}>
+                    {links.map((i, idx) => (
+                        <NavLink 
+                            icon={i.icon} 
+                            title={i.title} 
+                            extraLinks={i.extraLinks} 
+                            key={idx}
+                            active={i.title === activeLink}
+                        />
+                    ))}
+                    
+                </div>
+            </div>
+            
+            <div className={classes.logoutContainer}>
+                <div className={classes.logout}>
+                    <FiLogOut className={classes.logoutIcon} /> <p>Logout</p>
+                </div>
             </div>
         </div>
     );
